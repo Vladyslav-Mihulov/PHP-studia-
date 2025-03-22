@@ -1,0 +1,62 @@
+{extends file="../templates/main.html"}
+
+{block name=content}
+
+<h2>Kalkulator:</h2>
+
+
+<form class="pure-form pure-form-stacked" action="{$app_url}/app/kredyt.php" method="post">
+	<fieldset>
+		<label for="kwota">Wpisz kwote</label>
+		<input id="kwota" type="text" placeholder="wartość kwota" name="kwota" value="{$form['kwota']}">
+		
+                <label for="oprocentowanie">Wpisz oprocentowanie bez znaku ( % )</label>
+		<input id="oprocentowanie" type="text" placeholder="wartość oprocentowanie" name="oprocentowanie" value="{$form['oprocentowanie']}">
+					
+		<label for="okres">Wpisz okres w latach</label>
+		<input id="okres" type="text" placeholder="wartość okres" name="okres" value="{$form['okres']}">
+	</fieldset>
+	<button type="submit" class="pure-button pure-button-primary">Oblicz</button>
+</form>
+
+
+<div class="messages">
+
+{* wyświeltenie listy błędów, jeśli istnieją *}
+{if isset($messages)}
+	{if count($messages) > 0} 
+		<h4>Wystąpiły błędy: </h4>
+		<ol class="err">
+		{foreach  $messages as $msg}
+		{strip}
+			<li>{$msg}</li>
+		{/strip}
+		{/foreach}
+		</ol>
+	{/if}
+{/if}
+
+{* wyświeltenie listy informacji, jeśli istnieją *}
+{if isset($infos)}
+	{if count($infos) > 0} 
+		<h4>Informacje: </h4>
+		<ol class="inf">
+		{foreach  $infos as $msg}
+		{strip}
+			<li>{$msg}</li>
+		{/strip}
+		{/foreach}
+		</ol>
+	{/if}
+{/if}
+
+{if isset($result)}
+	<h4>Wynik</h4>
+	<p class="res">
+	{$result}
+	</p>
+{/if}
+
+</div>
+
+{/block}
