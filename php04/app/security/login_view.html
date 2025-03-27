@@ -1,0 +1,50 @@
+{extends file="../../templates/main.html"}
+
+{block name=content}
+
+<h3>Witam na stronie logowania </h3>
+
+<div style="width:90%; margin: 2em auto;">
+
+<form class="pure-form pure-form-stacked" action="{$conf->app_url}/app/kredyt.php" method="post">
+	<legend>Logowanie</legend>
+	<fieldset>
+		<label for="login">login: </label>
+                <input id="login" type="text" name="login" value="{$form->login}" />
+		<label for="password">Password: </label>
+		<input id="password" type="text" name="password" value="{$form->password}" />
+	</fieldset>
+	<input type="submit" value="zaloguj" class="pure-button pure-button-primary"/>
+</form>	
+
+<form class="pure-form pure-form-stacked" action="{$conf->app_url}/app/security/logout.php" method="post">
+	<input type="submit" value="wyloguj" class="pure-button pure-button-primary"/>
+</form>
+    
+{* wyświeltenie listy błędów, jeśli istnieją *}
+{if $msgs->isError()}
+	<h4>Wystąpiły błędy: </h4>
+	<ol class="err">
+	{foreach $msgs->getErrors() as $err}
+	{strip}
+		<li>{$err}</li>
+	{/strip}
+	{/foreach}
+	</ol>
+{/if}
+
+{* wyświeltenie listy informacji, jeśli istnieją *}
+{if $msgs->isInfo()}
+	<h4>Informacje: </h4>
+	<ol class="inf">
+	{foreach $msgs->getInfos() as $inf}
+	{strip}
+		<li>{$inf}</li>
+	{/strip}
+	{/foreach}
+	</ol>
+{/if}
+
+</div>
+
+{/block}
