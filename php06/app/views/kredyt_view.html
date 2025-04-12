@@ -1,0 +1,39 @@
+{extends file="main.html"}
+
+{block name=content}
+
+<h2>Prosty kalkulator</h2>
+
+<div style="margin-bottom: 15px; padding: 10px; border-radius: 8px;">
+        <strong>Użytkownik:</strong> {$user->login} <br>
+        <strong>Rola:</strong> {$user->role}
+</div>
+
+<form class="pure-form pure-form-stacked" action="{$conf->action_root}kredytCompute" method="post">
+	<fieldset>
+		<label for="kwota">Wpisz kwote</label>
+		<input id="kwota" type="text" placeholder="wartość kwota" name="kwota" value="{$form->kwota}">
+		
+                <label for="oprocentowanie">Wpisz oprocentowanie bez znaku ( % )</label>
+                <input id="oprocentowanie" type="text" placeholder="wartość oprocentowanie" name="oprocentowanie" value="{$form->oprocentowanie}">
+					
+		<label for="okres">Wpisz okres w latach</label>
+		<input id="okres" type="text" placeholder="wartość okres" name="okres" value="{$form->okres}">
+	</fieldset>
+	<button type="submit" class="pure-button pure-button-primary">Oblicz</button>
+        
+        <ul class="actions">
+            <li><a href="{$conf->action_url}logout"  class="button big">Wyloguj</a></li>
+	</ul>
+</form>
+
+
+{include file='messages.html'}
+
+{if isset($res->wynik)}
+<div class="messages info">
+	Wynik: {$res->wynik}
+</div>
+{/if}
+
+{/block}
