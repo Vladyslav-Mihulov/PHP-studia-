@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pl">
+<head>
+	<title>{$page_title|default:"Tytuł domyślny"}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/app06_Mihulov/assets/css/main.css" />	
+</head>
+
+<body>
+
+<!-- Wrapper -->
+    <div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+                    <div class="inner">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="{$conf->action_root}homePage" class="logo"><strong>Kalkulator VM</strong></a>
+				<ul class="icons">
+										
+				</ul>
+			</header>
+
+			<!-- Banner -->
+			<section id="banner">
+				<div class="content">
+					<header>
+					<h1>{$page_title|default:"Tytuł domyślny"}</h1>
+
+					
+                                        <p>
+                                        {$page_description|default:"Opis domyślny"}
+                                        </p>
+                                        {block name=content} Domyślna treść zawartości .... {/block}
+				</div>
+				
+			</section>
+
+							
+                    </div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+                    <div class="inner">
+
+			<!-- Menu -->
+			<nav id="menu">
+			<header class="major">
+				<h2>Menu</h2>
+			</header>
+				<ul>
+                                    <li><a href="{$conf->action_root}homepageShow">Homepage</a></li>
+                                    <!-- <li><a href="{$conf->action_root}homePage">Login</a></li> --->
+                                    <li><a href="{$conf->action_root}kredytShow">Kalkulator</a></li>
+										
+				</ul>
+			</nav>
+
+							
+							
+			<!-- Footer -->
+                            <footer id="footer">
+				<p class="copyright">&copy; Zadanie wykonal: Vladyslav Mihulov </p>
+                            </footer>
+
+                    </div>
+		</div>
+
+    </div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
