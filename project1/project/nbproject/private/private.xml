@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/project/resources/views/login.blade.php</file>
+            <file>file:/C:/xampp/htdocs/project/resources/views/registration.blade.php</file>
+            <file>file:/C:/xampp/htdocs/project/resources/views/admin.blade.php</file>
+            <file>file:/C:/xampp/htdocs/project/resources/views/employee.blade.php</file>
+            <file>file:/C:/xampp/htdocs/project/resources/views/home.blade.php</file>
+            <file>file:/C:/xampp/htdocs/project/resources/views/layouts/main.blade.php</file>
+            <file>file:/C:/xampp/htdocs/project/resources/views/inc/side_bar.blade.php</file>
+            <file>file:/C:/xampp/htdocs/project/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/project/app/Http/Controllers/Controller.php</file>
+            <file>file:/C:/xampp/htdocs/project/app/Http/Controllers/ctrl.php</file>
+            <file>file:/C:/xampp/htdocs/project/app/Http/Controllers/LoginController.php</file>
+            <file>file:/C:/xampp/htdocs/project/app/Http/Requests/LoginRequest.php</file>
+            <file>file:/C:/xampp/htdocs/project/app/Http/Requests/RegistrationRequest.php</file>
+            <file>file:/C:/xampp/htdocs/project/app/Http/Controllers/RegistrationController.php</file>
+            <file>file:/C:/xampp/htdocs/project/resources/views/profile.blade.php</file>
+            <file>file:/C:/xampp/htdocs/project/app/Http/Controllers/ProfileController.php</file>
+        </group>
+    </open-files>
+</project-private>
